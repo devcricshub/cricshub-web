@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-
+import type { FormEvent } from 'react';
 export default function CommunityConnect() {
   const [dialogue, setDialogue] = useState({
     isVisible: false,
     message: '',
     isSuccess: false,
-    isAlreadyRegistered: false // New state for this specific error
+    isAlreadyRegistered: false
   });
   
   const socialChannels = [
@@ -45,10 +45,10 @@ export default function CommunityConnect() {
     }
   ];
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
   
-    const form = event.target;
+    const form = event.target as HTMLFormElement; // Type assertion
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
   
@@ -76,10 +76,8 @@ export default function CommunityConnect() {
         });
         form.reset();
       } else {
-        // Check if the response is plain text
         const errorMessage = await response.text();
   
-        // Check for the specific "User with this email already exists" error
         if (errorMessage.includes("User with this email already exists")) {
           setDialogue({
             isVisible: true,
