@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image'; // Import the Image component from Next.js
+
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 relative overflow-hidden font-sans">
@@ -11,9 +13,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
-                <span className="text-xl font-bold text-white">C</span>
-              </div>
+                <Image 
+                  src="/images/iconLogo.png" 
+                  alt="CricsHub Logo" 
+                  width={52} 
+                  height={52} // Keep width and height equal
+                  className="rounded-full mr-3" // This will now apply a perfect circle border-radius
+                />
               <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
                 CricsHub
               </h3>

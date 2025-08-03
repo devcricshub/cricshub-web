@@ -3,13 +3,9 @@
 import { useState } from "react"; // Import the useState hook
 
 export default function Countdown() {
-  // Add a state variable to track the button's clicked status
   const [isNotified, setIsNotified] = useState(false);
 
-  // Function to handle the button click
   const handleNotifyMeClick = () => {
-    // In a real application, you would make an API call here.
-    // For this example, we simply change the state.
     setIsNotified(true);
   };
 
@@ -53,23 +49,37 @@ export default function Countdown() {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-block bg-gray-100/50 backdrop-blur-sm text-gray-700 px-6 py-2 rounded-full text-sm font-semibold mb-4 border border-gray-300">
+          <div 
+            className="inline-block bg-gray-100/50 backdrop-blur-sm text-gray-700 px-6 py-2 rounded-full text-sm font-semibold mb-4 border border-gray-300"
+            data-aos="fade-up" // Added AOS
+          >
             GET READY FOR THE FUTURE OF CRICKET
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+          <h2 
+            className="text-5xl md:text-6xl font-bold text-gray-800 mb-6"
+            data-aos="fade-up" data-aos-delay="100" // Added AOS
+          >
             Experience the Cricket
             <span className="block bg-gradient-to-r from-gray-600 to-gray-400 bg-clip-text text-transparent">
               Revolution
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Prepare to transform your game experience with CrixHub's upcoming comprehensive platform – launching soon!
+          <p 
+            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            data-aos="fade-up" data-aos-delay="200" // Added AOS
+          >
+            Prepare to transform your game experience with CricsHub's upcoming comprehensive platform – launching soon!
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
-            <div key={index} className="bg-white rounded-3xl p-8 text-center hover:bg-gray-50 transition-all duration-500 transform hover:-translate-y-4 group border border-gray-200 shadow-sm">
+            <div 
+              key={index} 
+              className="bg-white rounded-3xl p-8 text-center hover:bg-gray-50 transition-all duration-500 transform hover:-translate-y-4 group border border-gray-200 shadow-sm"
+              data-aos="fade-up" // Fade up animation
+              data-aos-delay={index * 100 + 300} // Stagger delay for each card
+            >
               <div className={`w-20 h-20 bg-gradient-to-br ${stat.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                 <i className={`${stat.icon} text-3xl text-white`}></i>
               </div>
@@ -82,25 +92,27 @@ export default function Countdown() {
         </div>
 
         <div className="text-center">
-          <div className="bg-white rounded-3xl p-8 max-w-2xl mx-auto border border-gray-200 shadow-sm">
+          <div 
+            className="bg-white rounded-3xl p-8 max-w-2xl mx-auto border border-gray-200 shadow-sm"
+            data-aos="fade-up" data-aos-delay="700" // Added AOS
+          >
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Ready to Get Started?</h3>
             <p className="text-gray-600 mb-6">Be among the first to experience CricsHub! Sign up for updates.</p>
             
-            {/* The button with state-based animation */}
             <button
               onClick={handleNotifyMeClick}
               disabled={isNotified}
               className={`group relative px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl whitespace-nowrap cursor-pointer overflow-hidden ${
                 isNotified
-                  ? "bg-green-500 text-white pointer-events-none" // New styles for the clicked state
-                  : "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white" // Original styles
+                  ? "bg-green-500 text-white pointer-events-none"
+                  : "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white"
               }`}
             >
               <span className="relative z-10 flex items-center justify-center">
                 {isNotified ? (
-                  <i className="ri-check-line mr-3 text-xl"></i> // Checkmark icon
+                  <i className="ri-check-line mr-3 text-xl"></i>
                 ) : (
-                  <i className="ri-notification-line mr-3 text-xl"></i> // Original icon
+                  <i className="ri-notification-line mr-3 text-xl"></i>
                 )}
                 {isNotified ? "You're all set!" : "Notify Me On Launch"}
               </span>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Pacifico } from "next/font/google";
 import "./globals.css";
-
+import AOSInitializer from './components/AOSInitializer';
 const pacifico = Pacifico({
   weight: '400',
   subsets: ['latin'],
@@ -36,7 +36,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}
+        
       >
+        <AOSInitializer />
         {children}
       </body>
     </html>
