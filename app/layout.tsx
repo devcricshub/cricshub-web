@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "CricsHub",
-  description: "CricsHub",
+  description: "Discover CricsHub, the ultimate cricket revolution! Your all-in-one app for live scores, streaming, tournament tools, and fantasy cricket. Coming soon!",
   icons: {
     icon: '/favicon.ico', 
   },
