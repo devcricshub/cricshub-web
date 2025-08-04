@@ -90,42 +90,6 @@ export default function Countdown() {
             </div>
           ))}
         </div>
-
-        <div className="text-center">
-          <div 
-            className="bg-white rounded-3xl p-8 max-w-2xl mx-auto border border-gray-200 shadow-sm"
-            data-aos="fade-up" data-aos-delay="700" // Added AOS
-          >
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">Ready to Get Started?</h3>
-            <p className="text-gray-600 mb-6">Be among the first to experience CricsHub! Sign up for updates.</p>
-            
-            <button
-              onClick={handleNotifyMeClick}
-              disabled={isNotified}
-              className={`group relative px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl whitespace-nowrap cursor-pointer overflow-hidden ${
-                isNotified
-                  ? "bg-green-500 text-white pointer-events-none"
-                  : "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white"
-              }`}
-            >
-              <span className="relative z-10 flex items-center justify-center">
-                {isNotified ? (
-                  <i className="ri-check-line mr-3 text-xl"></i>
-                ) : (
-                  <i className="ri-notification-line mr-3 text-xl"></i>
-                )}
-                {isNotified ? "You're all set!" : "Notify Me On Launch"}
-              </span>
-              <div
-                className={`absolute inset-0 ${
-                  isNotified
-                    ? "bg-green-600"
-                    : "bg-gradient-to-r from-blue-400 to-blue-500 transform translate-x-full group-hover:translate-x-0"
-                } transition-transform duration-300`}
-              ></div>
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );

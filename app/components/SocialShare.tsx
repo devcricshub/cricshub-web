@@ -249,12 +249,12 @@ export default function CommunityConnect() {
                 }
               `}</style>
               <button 
-                type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer whitespace-nowrap"
-                data-aos="fade-up" data-aos-delay="400"
-              >
-                Get Early Access & Updates
-              </button>
+  type="submit"
+  className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer whitespace-nowrap flex items-center justify-center"
+  data-aos="fade-up" data-aos-delay="400"
+>
+  Get Early Access & Updates
+</button>
             </form>
           </div>
         </div>
