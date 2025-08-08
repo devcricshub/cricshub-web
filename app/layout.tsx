@@ -23,9 +23,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "CricsHub | Live Cricket Scores, Manage Tournament & Play Fantasy!",
   description:"CricsHub is the ultimate all-in-one cricket app for live scores, live streaming, and fantasy sports. Get real-time match updates, manage tournaments with powerful tools, and build your winning fantasy team. Your comprehensive cricket journey starts here!",
-  icons: {
-    icon: '/favicon.ico', 
-  },
 
   keywords: ["cricket","live scoring","local fantasy","stream", "live scores", "fantasy cricket", "cricket app", "live streaming", "cricket tournament", "cricket news", "IPL", "T20"],
   openGraph: {
