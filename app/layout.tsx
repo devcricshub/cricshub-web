@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Pacifico } from "next/font/google";
 import "./globals.css";
 import AOSInitializer from './components/AOSInitializer';
+
 const pacifico = Pacifico({
   weight: '400',
   subsets: ['latin'],
@@ -20,10 +21,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CricsHub - Live the Game, Play the Fantasy!",
-  description: "Discover CricsHub, the ultimate cricket revolution! Your all-in-one app for live scores, streaming, tournament tools, and fantasy cricket. Coming soon!",
-  icons: {
-    icon: '/images/favicon.ico', 
+  title: "CricsHub | Live Cricket Scores, Manage Tournament & Play Fantasy!",
+  description: "CricsHub is the ultimate all-in-one platform for cricket fans. Get live cricket scores, watch live streaming, manage tournaments, and play fantasy cricket. Your cricket journey starts here!",
+
+  keywords: ["cricket", "live scores", "fantasy cricket", "cricket app", "live streaming", "cricket tournament", "cricket news", "IPL", "T20"],
+  openGraph: {
+    title: "CricsHub: The Ultimate Cricket App",
+    description: "Your all-in-one app for live scores, streaming, tournament tools, and fantasy cricket. Coming soon!",
+    url: "https://www.cricshub.com",
+    siteName: "CricsHub",
+    images: [
+      {
+        url: "https://www.cricshub.com/og-image.jpg", 
+        width: 1200,
+        height: 630,
+        alt: "CricsHub - Live the Game, Play the Fantasy!",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
 };
 
@@ -36,7 +52,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}
-        
       >
         <AOSInitializer />
         {children}
