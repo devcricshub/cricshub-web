@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "CricsHub",
     images: [
       {
-        url: "https://www.cricshub.com/og-image.jpg", 
+        url: "http://res.cloudinary.com/di4m8pzsa/image/upload/v1754663685/qqbx5oi2kzptbbwrbv4r.png", 
         width: 1200,
         height: 630,
         alt: "CricsHub - Live the Game, Play the Fantasy!",
