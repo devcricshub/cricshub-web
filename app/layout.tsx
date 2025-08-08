@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         url: "http://res.cloudinary.com/di4m8pzsa/image/upload/v1754663685/qqbx5oi2kzptbbwrbv4r.png", 
         width: 1200,
         height: 630,
-        alt: "CricsHub - Live the Game, Play the Fantasy!",
+        alt: "CricsHub | Live Cricket Scores, Manage Tournament & Play Fantasy!",
       },
     ],
     locale: "en_US",
